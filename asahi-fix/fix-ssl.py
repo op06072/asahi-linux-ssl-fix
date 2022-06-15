@@ -7,6 +7,3 @@ with open("./asahi.sh", "r", encoding="utf-8") as f:
 
 with open("./asahi.sh", "w", encoding="utf-8") as f:
     f.write(lines)
-
-print("  Start Installer...")
-system("sh ./asahi.sh")
