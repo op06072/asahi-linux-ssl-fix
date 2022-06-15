@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: MIT
+print("enter")
 with open("./asahi.sh", "r", encoding="utf-8") as f:
     lines = f.read().replace('tar xf "$PKG"', 'tar xf "$PKG"\ncp ./urlcache-fix.py /tmp/asahi-install/urlcache.py')
 
