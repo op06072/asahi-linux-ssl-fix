@@ -1,6 +1,5 @@
 # SPDX-License-Identifier: MIT
 from os.path import abspath
-from subprocess import Popen
 
 shscript = abspath("./asahi-fix/asahi.sh")
 with open(shscript, "r", encoding="utf-8") as f:
