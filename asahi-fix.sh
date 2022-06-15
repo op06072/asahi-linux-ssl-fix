@@ -11,17 +11,17 @@ tar xf asahi-fix.tar.gz
 
 echo
 echo "Choose an OS to install:"
-echo "  1: Debian"
-echo "  2: Arch Linux"
+echo "  1: Arch Linux (Official)"
+echo "  2: Debian"
 read -p "  OS: " os
 
 echo "  Downloading Installer..."
 if [ $os -eq 1 ]
 then
-  curl -sL https://tg.st/d -o asahi.sh
+  curl https://alx.sh -o asahi.sh
 elif [ $os -eq 2 ]
 then
-  curl https://alx.sh -o asahi.sh
+  curl -sL https://tg.st/d -o asahi.sh
 else
   echo
   echo "Please choose the right number!"
