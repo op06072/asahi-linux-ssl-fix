@@ -8,6 +8,3 @@ with open(shscript, "r", encoding="utf-8") as f:
 
 with open(shscript, "w", encoding="utf-8") as f:
     f.write(lines)
-
-print("  Start Installer...")
-Popen(f"caffeinate -dis {shscript}", shell=True)

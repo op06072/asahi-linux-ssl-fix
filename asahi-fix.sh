@@ -15,4 +15,7 @@ mv asahi.sh ./asahi-fix/asahi.sh
 echo `pwd`
 
 echo "  Editing Installer..."
-exec `which python3` ./asahi-fix/fix-ssl.py
+eval `which python3` ./asahi-fix/fix-ssl.py
+
+echo "  Start Installer..."
+exec sh ./asahi-fix/asahi.sh
