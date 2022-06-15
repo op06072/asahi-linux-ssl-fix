@@ -1,9 +1,13 @@
 # SPDX-License-Identifier: MIT
 from os.path import abspath
+from subprocess import Popen
 
-print("enter")
-with open(abspath("./asahi-fix/asahi.sh"), "r", encoding="utf-8") as f:
+shscript = abspath("./asahi-fix/asahi.sh")
+with open(shscript, "r", encoding="utf-8") as f:
     lines = f.read().replace('tar xf "$PKG"', 'tar xf "$PKG"\ncp ./urlcache-fix.py /tmp/asahi-install/urlcache.py')
 
-with open(abspath("./asahi-fix/asahi.sh"), "w", encoding="utf-8") as f:
+with open(shscript, "w", encoding="utf-8") as f:
     f.write(lines)
+
+print("  Start Installer...")
+Popen(f"sh {shscript}", shell=True)

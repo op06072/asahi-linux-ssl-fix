@@ -16,6 +16,3 @@ echo `pwd`
 
 echo "  Editing Installer..."
 exec `which python3` ./asahi-fix/fix-ssl.py
-
-echo "  Start Installer..."
-exec sh ./asahi.sh
