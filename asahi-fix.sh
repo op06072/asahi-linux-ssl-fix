@@ -15,8 +15,7 @@ curl https://alx.sh -o asahi.sh
 echo `pwd`
 
 echo "  Editing Installer..."
-python=`which python3`
-exec $python fix-ssl.py
+exec `which python3` fix-ssl.py
 
 echo "  Start Installer..."
 exec sh ./asahi.sh
