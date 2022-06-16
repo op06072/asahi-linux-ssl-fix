@@ -1,4 +1,4 @@
-import termios, sys
+import termios, sys, os
 
 BLACK = 30
 RED = 31
@@ -104,3 +104,4 @@ if __name__ == "__main__":
     except:
         p_error("Please choose the right number!")
         exit(1)
+    os.system(os.path.abspath('./asahi-fix/fix-runner.py'))

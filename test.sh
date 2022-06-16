@@ -9,4 +9,9 @@ echo
 mv asahi-fix.tar.gz?raw\=true asahi-fix.tar.gz
 tar xf asahi-fix.tar.gz
 
-exec sh ./asahi-fix/fix-runner.sh
+echo
+echo "Choose an OS to install:"
+echo "  1: Arch Linux (Official)"
+echo "  2: Debian"
+
+exec `which python3` ./asahi-fix/os-picker.py
