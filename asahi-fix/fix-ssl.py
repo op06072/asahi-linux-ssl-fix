@@ -4,10 +4,10 @@ from sys import argv
 
 shscript = abspath("./asahi-fix/asahi.sh")
 osname = argv[1]
-if osname == 1:
+if osname == "1":
     with open(shscript, "r", encoding="utf-8") as f:
         lines = f.read().replace('tar xf "$PKG"', f'tar xf "$PKG"\ncp {abspath("./asahi-fix/urlcache-fix.py")} /tmp/asahi-install/urlcache.py')
-elif osname == 2:
+elif osname == "2":
     with open(shscript, "r", encoding="utf-8") as f:
         origin = [
             "export INSTALLER_DATA_ALT=https://alx.sh/installer_data.json\n",
