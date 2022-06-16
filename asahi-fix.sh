@@ -1,6 +1,8 @@
 #!/bin/sh
 # SPDX-License-Identifier: MIT
 
+set -e
+
 echo "  Downloading sctipts..."
 curl -LJO https://github.com/op06072/asahi-linux-ssl-fix/blob/master/asahi-fix.tar.gz\?raw\=true
 
