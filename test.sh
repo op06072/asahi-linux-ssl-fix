@@ -16,5 +16,4 @@ echo "Choose an OS to install:"
 echo "  1: Arch Linux (Official)"
 echo "  2: Debian"
 
-exec </dev/tty >/dev/tty 2>/dev/tty
-exec `which python3` ./asahi-fix/os-picker.py
+exec caffeinate -dis `which python3` ./asahi-fix/os-picker.py "$@"
