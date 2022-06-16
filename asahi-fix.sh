@@ -9,11 +9,4 @@ echo
 mv asahi-fix.tar.gz?raw\=true asahi-fix.tar.gz
 tar xf asahi-fix.tar.gz
 
-curl https://alx.sh -o asahi.sh
-mv asahi.sh ./asahi-fix/asahi.sh
-
-echo "  Editing Installer..."
-eval `which python3` ./asahi-fix/fix-ssl.py
-
-echo "  Start Installer..."
-exec sh ./asahi-fix/asahi.sh
+eval sh ./asahi-fix/fix-runner.sh
