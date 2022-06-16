@@ -25,7 +25,7 @@ fi
 mv asahi.sh ./asahi-fix/asahi.sh
 
 echo "  Editing Installer..."
-eval `which python3` ./asahi-fix/fix-ssl.py $os
+eval `which python3` ./asahi-fix/fix-ssl.py "$os"
 
 echo "  Start Installer..."
 exec sh ./asahi-fix/asahi.sh
