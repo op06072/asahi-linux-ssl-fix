@@ -13,7 +13,7 @@ echo
 echo "Choose an OS to install:"
 echo "  1: Arch Linux (Official)"
 echo "  2: Debian"
-read -p "  OS: " os < /dev/tty
+read -p "  OS: " os < /dev/stdin
 
 echo "  Downloading Installer..."
 if [ $os -eq 1 ]
