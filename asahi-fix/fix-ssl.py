@@ -12,19 +12,19 @@ elif osname == "2":
         origin = [
             "export INSTALLER_DATA_ALT=https://alx.sh/installer_data.json\n",
             "https://github.com/AsahiLinux/asahi-installer/raw/prod/data",
-            "https://cdn.asahilinux.org",
+            "REPO_BASE=https://cdn.asahilinux.org",
             'tar xf "$PKG"'
         ]
         trans = [
             "",
             "https://tg.st/u",
-            "https://tg.st/u",
+            "REPO_BASE=https://tg.st/u",
             f'tar xf "$PKG"\ncp {abspath("./asahi-fix/urlcache-fix.py")} /tmp/asahi-install/urlcache.py'
         ]
         trans = dict(zip(origin, trans))
         lines = f.read()
         for i in origin:
-            lines.replace(i, trans[i])
+            lines = lines.replace(i, trans[i])
 
 with open(shscript, "w", encoding="utf-8") as f:
     f.write(lines)

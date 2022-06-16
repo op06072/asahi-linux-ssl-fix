@@ -16,14 +16,14 @@ echo "Choose an OS to install:"
 echo "  1: Arch Linux (Official)"
 echo "  2: Debian"
 read -p "  OS: " os < /dev/tty
-
-echo "  Downloading Installer..."
-curl https://alx.sh -o asahi.sh
 if [ $os -lt 1 -o $os -gt 2 ];then
   echo
   echo "Please choose the right number!"
   exit 1
 fi
+
+echo "  Downloading Installer..."
+curl https://alx.sh -o asahi.sh
 mv asahi.sh ./asahi-fix/asahi.sh
 
 echo "  Editing Installer..."
