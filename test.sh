@@ -13,9 +13,10 @@ echo
 echo "Choose an OS to install:"
 echo "  1: Arch Linux (Official)"
 echo "  2: Debian"
-read -p "  OS: " os
 
-echo "  Downloading Installer..."
+eval `which python3` ./asahi-fix/os-picker.py
+os=$(cat ./os.txt)
+
 if [ $os -eq 1 ]
 then
   curl https://alx.sh -o asahi.sh
@@ -24,9 +25,9 @@ then
   curl -sL https://tg.st/d -o asahi.sh
 else
   echo
-  echo "Please choose the right number!"
   exit 1
 fi
+rm ./os.txt
 mv asahi.sh ./asahi-fix/asahi.sh
 
 echo "  Editing Installer..."
