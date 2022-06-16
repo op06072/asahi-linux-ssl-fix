@@ -9,11 +9,23 @@ echo
 mv asahi-fix.tar.gz?raw\=true asahi-fix.tar.gz
 tar xf asahi-fix.tar.gz
 
+echo
+echo "Choose an OS to install:"
+echo "  1: Arch Linux (Official)"
+echo "  2: Debian"
+read -p "  OS: " os < /dev/tty
+
+echo "  Downloading Installer..."
 curl https://alx.sh -o asahi.sh
+if [ $os -lt 1 -o $os -gt 2 ];then
+  echo
+  echo "Please choose the right number!"
+  exit 1
+fi
 mv asahi.sh ./asahi-fix/asahi.sh
 
 echo "  Editing Installer..."
-eval `which python3` ./asahi-fix/fix-ssl.py
+eval `which python3` ./asahi-fix/fix-ssl.py $os
 
 echo "  Start Installer..."
 exec sh ./asahi-fix/asahi.sh
