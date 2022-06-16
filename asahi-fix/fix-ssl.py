@@ -3,7 +3,6 @@ from os.path import abspath
 from sys import argv
 
 shscript = abspath("./asahi-fix/asahi.sh")
-print(argv)
 osname = argv[1]
 if osname == 1:
     with open(shscript, "r", encoding="utf-8") as f:
