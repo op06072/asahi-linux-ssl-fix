@@ -19,4 +19,3 @@ else
   echo "Please choose the right number!"
   exit 1
 fi
-mv asahi.sh ./asahi-fix/asahi.sh
